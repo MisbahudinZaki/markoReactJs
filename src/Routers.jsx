@@ -31,6 +31,7 @@ function AppRouter(){
             <Route path="single_post" element={<SinglePostPage />}/>
             <Route path="contact" element={<ContactPage />}/>
             <Route path="404_page" element={<NotFoundPage />}/>
+            <Route path="*" element={<NotFoundPage />}/>
         </Routes>
     );
 }
