@@ -4,6 +4,7 @@ import AppRouter from "./Routers";
 import Navbar from "./Components/Header/header";
 import Footer from "./Components/Footer/footer";
 import Sidebar from "./Components/Sidebar/Sidebar";
+import '../public/assets/js/script.js';
 
 function App(){
   useEffect(() => {
