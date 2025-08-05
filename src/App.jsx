@@ -9,12 +9,12 @@ import "../public/assets/js/script.js";
 function App(){
   useEffect(() => {
     initBannerVideo?.();
+    initThemeSwitch?.();
     initNavLink?.();
     initSidebar?.();
     initEditSidebar?.();
     initSidebarDropdown?.();
     initCounter?.();
-    initThemeSwitch?.();
     initSubmitContact?.();
     initSubmitNewsletter?.();
     initAnimateData?.();

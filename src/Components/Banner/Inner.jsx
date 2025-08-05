@@ -3,7 +3,7 @@ import React from "react";
 const BannerInnerSection = ({ title, currentPage }) => {
   return (
     <div className="section-banner">
-        <div className="banner-layout-wrapper">
+        <div className="banner-layout-wrapper banner-inner">
             <div className="banner-layout">
                 <div className="d-flex flex-column text-center align-items-center gspace-2">
                     <h2

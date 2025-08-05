@@ -91,7 +91,7 @@ function initThemeSwitch() {
         $('body').addClass('lightmode');
         localStorage.setItem('lightmode', 'active');
         $themeIcon.removeClass('fa-moon').addClass('fa-sun');
-        $siteLogo.attr('src', 'assets/image/marko-logo-dark.png');
+        $siteLogo.attr('src', 'assets/image/marko-logo-dark.png'); 
         updatePartnerLogos();
     }
 

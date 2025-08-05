@@ -7,7 +7,6 @@ const CaseStudiesSection = ({ noPadding }) => {
     <div className={`section ${noPadding ? "p-0" : ""}`}>
         <div className="hero-container">
             <div className="case-studies-layout">
-                {/* Header */}
                 <div className="card card-case-studies">
                     <div className="row row-cols-xl-2 row-cols-1 grid-spacer-5">
                         <div className="col">
@@ -21,7 +20,7 @@ const CaseStudiesSection = ({ noPadding }) => {
                         </div>
                         <div className="col">
                             <div className="d-flex flex-column h-100 justify-content-end gspace-2 animate-box animated animate__animated" data-animate="animate__fadeInRight">
-                                <p>We don't just talk about results—we deliver them...</p>
+                                <p>We don't just talk about results—we deliver them. Here are some of our most impactful case studies showcasing how our digital marketing strategies drive success.</p>
                                 <div className="link-wrapper">
                                     <a href="./case_studies">More Case Studies</a>
                                     <i className="fa-solid fa-circle-arrow-right"></i>
