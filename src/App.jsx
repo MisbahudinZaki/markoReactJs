@@ -7,23 +7,25 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App(){
   useEffect(() => {
-    const checkScriptsReady = setInterval(() => {
-      if (typeof initThemeSwitch === "function") {
-        clearInterval(checkScriptsReady);
-  
-        initBannerVideo?.();
-        initThemeSwitch?.();
-        initNavLink?.();
-        initSidebar?.();
-        initEditSidebar?.();
-        initSidebarDropdown?.();
-        initCounter?.();
-        initSubmitContact?.();
-        initSubmitNewsletter?.();
-        initAnimateData?.();
+    const checkReady = setInterval(() => {
+      if (typeof window.initThemeSwitch === "function") {
+        clearInterval(checkReady);
+        window.initThemeSwitch(); // Panggil themeswitch dari global
       }
     }, 100);
-    setTimeout(() => clearInterval(checkScriptsReady), 5000);
+
+    initBannerVideo?.();
+    initThemeSwitch?.();
+    initNavLink?.();
+    initSidebar?.();
+    initEditSidebar?.();
+    initSidebarDropdown?.();
+    initCounter?.();
+    initSubmitContact?.();
+    initSubmitNewsletter?.();
+    initAnimateData?.();
+
+    setTimeout(() => clearInterval(checkReady), 5000); // timeout
   }, []);
   
 
