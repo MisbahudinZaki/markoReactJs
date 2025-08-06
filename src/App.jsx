@@ -7,7 +7,9 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App(){
   useEffect(() => {
-    initThemeSwitch?.();
+    if (typeof initThemeSwitch === "function") {
+      initThemeSwitch();
+    }
     initBannerVideo?.();
     initNavLink?.();
     initSidebar?.();
