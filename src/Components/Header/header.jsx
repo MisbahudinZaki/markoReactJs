@@ -1,4 +1,5 @@
 import React from "react";
+import ThemeSwitcher from "../Theme/themeswitch";
 
 function Navbar() {
     return(
@@ -69,9 +70,7 @@ function Navbar() {
                         </div>
                         <div className="navbar-action-container">
                             <div className="navbar-action-button">
-                                <button id="themeSwitch" aria-label="Toggle Theme">
-                                    <i id="Themeicon" className="fas fa-moon"></i>
-                                </button>
+                                <ThemeSwitcher />
                             </div>
                             <div className="navbar-icon-wrapper">
                                 <div className="icon-circle">
