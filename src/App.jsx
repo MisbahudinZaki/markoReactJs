@@ -13,19 +13,20 @@ function App(){
         window.initThemeSwitch(); // Panggil themeswitch dari global
       }
     }, 100);
+
+    initBannerVideo?.();
+    initNavLink?.();
+    initSidebar?.();
+    initEditSidebar?.();
+    initSidebarDropdown?.();
+    initCounter?.();
+    initSubmitContact?.();
+    initSubmitNewsletter?.();
+    initAnimateData?.();
+
     setTimeout(() => clearInterval(checkReady), 5000); // timeout
   }, []);
   
-  initBannerVideo?.();
-  initThemeSwitch?.();
-  initNavLink?.();
-  initSidebar?.();
-  initEditSidebar?.();
-  initSidebarDropdown?.();
-  initCounter?.();
-  initSubmitContact?.();
-  initSubmitNewsletter?.();
-  initAnimateData?.();
 
   return (
     <Router>
