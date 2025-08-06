@@ -7,17 +7,26 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App(){
   useEffect(() => {
-    initBannerVideo?.();
-    initThemeSwitch?.();
-    initNavLink?.();
-    initSidebar?.();
-    initEditSidebar?.();
-    initSidebarDropdown?.();
-    initCounter?.();
-    initSubmitContact?.();
-    initSubmitNewsletter?.();
-    initAnimateData?.();
+    // Tunggu sampai window benar-benar siap
+    const checkScriptsReady = setInterval(() => {
+      if (typeof initThemeSwitch === "function") {
+        clearInterval(checkScriptsReady);
+  
+        initBannerVideo?.();
+        initThemeSwitch?.();
+        initNavLink?.();
+        initSidebar?.();
+        initEditSidebar?.();
+        initSidebarDropdown?.();
+        initCounter?.();
+        initSubmitContact?.();
+        initSubmitNewsletter?.();
+        initAnimateData?.();
+      }
+    }, 100);
+    setTimeout(() => clearInterval(checkScriptsReady), 5000);
   }, []);
+  
 
   return (
     <Router>
