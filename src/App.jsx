@@ -7,13 +7,7 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App(){
   useEffect(() => {
-    const checkReady = setInterval(() => {
-      if (typeof window.initThemeSwitch === "function") {
-        clearInterval(checkReady);
-        window.initThemeSwitch(); // Panggil themeswitch dari global
-      }
-    }, 100);
-
+    initThemeSwitch?.();
     initBannerVideo?.();
     initNavLink?.();
     initSidebar?.();
@@ -24,7 +18,7 @@ function App(){
     initSubmitNewsletter?.();
     initAnimateData?.();
 
-    setTimeout(() => clearInterval(checkReady), 5000); // timeout
+    setTimeout(() => clearInterval(checkReady), 5000);
   }, []);
   
 
