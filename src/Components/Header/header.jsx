@@ -8,7 +8,7 @@ function Navbar() {
                     <div className="navbar-container">
                         <div className="logo-container">
                             <a className="navbar-brand" href="/">
-                            <img src="./assets/image/marko-logo.png" className="site-logo img-fluid" alt="Logo" />
+                            <img src="/assets/image/marko-logo.png" className="site-logo img-fluid" alt="Logo" />
                             </a>
                         </div>
                         <button

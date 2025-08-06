@@ -8,7 +8,7 @@ function Sidebar(){
                 <div className="sidebar">
                     <div className="sidebar-header">
                         <div className="logo">
-                            <img src="./assets/image/marko-logo.png" className="site-logo img-fluid logo" alt="Logo" />
+                            <img src="/assets/image/marko-logo.png" className="site-logo img-fluid logo" alt="Logo" />
                         </div>
                         <button className="close-btn"><span>X</span></button>
                     </div>
