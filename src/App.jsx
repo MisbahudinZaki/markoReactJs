@@ -1,15 +1,14 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import { useEffect } from "react";
 import AppRouter from "./Routers";
+import { initThemeSwitch } from "./utils/themeswitch";
 import Navbar from "./Components/Header/header";
 import Footer from "./Components/Footer/footer";
 import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App(){
   useEffect(() => {
-    if (typeof initThemeSwitch === "function") {
-      initThemeSwitch();
-    }
+    initThemeSwitch?.();
     initBannerVideo?.();
     initNavLink?.();
     initSidebar?.();
