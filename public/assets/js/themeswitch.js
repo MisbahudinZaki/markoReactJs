@@ -23,13 +23,13 @@ function initThemeSwitch() {
         $('body').addClass('lightmode');
         localStorage.setItem('lightmode', 'active');
         $themeIcon.removeClass('fa-moon').addClass('fa-sun');
-        $siteLogo.attr('src', 'assets/image/marko-logo-dark.png'); 
+        $siteLogo.attr('src', 'assets/image/marko-logo-dark.png');
         updatePartnerLogos();
     }
 
     function disableLightMode() {
         $('body').removeClass('lightmode');
-        localStorage.setItem('lightmode', null);
+        localStorage.removeItem('lightmode');
         $themeIcon.removeClass('fa-sun').addClass('fa-moon');
         $siteLogo.attr('src', 'assets/image/marko-logo.png');
         updatePartnerLogos();
@@ -37,16 +37,13 @@ function initThemeSwitch() {
 
     if (lightmode === 'active') {
         enableLightMode();
-    } else {
-        disableLightMode();
     }
 
     $themeSwitch.on('click', function () {
-        lightmode = localStorage.getItem('lightmode');
-        if (lightmode !== 'active') {
-            enableLightMode();
-        } else {
+        if ($('body').hasClass('lightmode')) {
             disableLightMode();
+        } else {
+            enableLightMode();
         }
     });
 }
