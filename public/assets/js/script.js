@@ -386,3 +386,14 @@ function initAnimateData() {
         observer.observe(this);
     });
 }
+
+window.initBannerVideo = initBannerVideo;
+window.initThemeSwitch = initThemeSwitch;
+window.initCounter = initCounter;
+window.initNavLink = initNavLink;
+window.initSidebar = initSidebar;
+window.initEditSidebar = initEditSidebar;
+window.initSidebarDropdown = initSidebarDropdown;
+window.initAnimateData = initAnimateData;
+window.initSubmitContact = function() {}; // jika belum ada, minimal dummy
+window.initSubmitNewsletter = function() {}; // jika belum ada, minimal dummy

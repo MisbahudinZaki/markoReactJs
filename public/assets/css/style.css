@@ -1367,19 +1367,6 @@ body.lightmode .banner-layout-wrapper::before {
     z-index: 1;
 }
 
-.digital-process-layout::before{
-    content: '';
-    position: absolute;
-    background-color: var(--accent-transparent);
-    background-image: linear-gradient(180deg, var(--accent-color) 0%, var(--accent-transparent) 65%);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.5;
-    z-index: -1;
-}
-
 .section-wrapper-digital-process{
     padding: 0px 30px 0px 30px;
 }
@@ -2082,6 +2069,7 @@ body.lightmode .navbar-icon-wrapper{
 
 body.lightmode .card-partner{
     background-image: radial-gradient(at top left, var(--accent-color-4) 30%, var(--accent-color-4) 30%);
+    border: 1px solid var(--accent-color-3);
 }
 
 .card-partner::before{
@@ -2502,7 +2490,7 @@ body.lightmode .card-case-studies{
 }
 
 body.lightmode .case-studies-content{
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--accent-color-3);
 }
 
 body.lightmode .case-studies-content::before{
@@ -2859,7 +2847,7 @@ body.lightmode .case-studies-content::before{
 }
 
 body.lightmode .card-blog{
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--accent-color-3);
 }
 
 /* ================== 33. Pricing Components ================== */
@@ -4075,6 +4063,13 @@ body.lightmode .newsletter-layout{
     height: 48px;
     background-size: 48px 48px;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23D1D1D1" class="bi bi-dash" viewBox="0 0 16 16"><path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/></svg>');
+}
+
+body.lightmode .accordion-button::after{
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23000000" class="bi bi-plus" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/></svg>');
+}
+body.lightmode .accordion-button:not(.collapsed)::after{
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23000000" class="bi bi-dash" viewBox="0 0 16 16"><path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/></svg>');
 }
 
 .accordion .accordion-button:not(.collapsed) {
