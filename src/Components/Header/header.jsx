@@ -69,8 +69,8 @@ function Navbar() {
                         </div>
                         <div className="navbar-action-container">
                             <div className="navbar-action-button">
-                                <button id="theme-switch" aria-label="Toggle Theme">
-                                    <i id="theme-icon" className="fas fa-moon"></i>
+                                <button id="themeSwitch" aria-label="Toggle Theme">
+                                    <i id="Themeicon" className="fas fa-moon"></i>
                                 </button>
                             </div>
                             <div className="navbar-icon-wrapper">

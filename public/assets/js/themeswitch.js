@@ -1,7 +1,7 @@
 function initThemeSwitch() {
     let lightmode = localStorage.getItem('lightmode');
-    const $themeSwitch = $('#theme-switch');
-    const $themeIcon = $('#theme-icon');
+    const $themeSwitch = $('#themeSwitch');
+    const $themeIcon = $('#themeIcon');
     const $siteLogo = $('.site-logo');
 
     function updatePartnerLogos() {

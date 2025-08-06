@@ -1043,7 +1043,7 @@ body.lightmode .keep-dark .btn-accent{
     letter-spacing: 1px;
 }
 
-#theme-switch{
+#themeSwitch{
     height: 45px;
     width: 45px;
     padding: 0;
@@ -1055,7 +1055,7 @@ body.lightmode .keep-dark .btn-accent{
     order: 2;
 }
 
-#theme-switch i{
+#themeSwitch i{
     font-size: var(--font-size-xl);
 }
 
