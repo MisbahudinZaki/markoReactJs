@@ -912,6 +912,10 @@ ul{
     width: 80%;
 }
 
+body.lightmode #newsletterForm {
+    border: 1px solid var(--accent-color-3);
+}
+
 #newsletterForm input {
     padding: 23px 20px 23px 20px;
     border-radius: 20px 20px 20px 20px;
@@ -1437,6 +1441,12 @@ body.lightmode .digital-process-banner{
     z-index: 0;
 }
 
+.digital-process-card{
+    display: flex;
+    flex-direction: row;
+    gap: 20px 20px;
+}
+
 .digital-process-steps{
     background-color: var(--secondary);
     display: flex;
@@ -1468,6 +1478,10 @@ body.lightmode .digital-process-banner{
     width: 3px;
     height: 200px;
 }
+
+.digital-process-card:first-child .step-spacer {
+    display: none;
+}  
 
 .process-icon{
     width: 20%;
@@ -5047,6 +5061,9 @@ body.lightmode .accordion-button:not(.collapsed)::after{
     }
     .banner-icon-container{
         width: 100%;
+    }
+    .digital-process-card{
+        flex-direction: column;
     }
     .step-spacer{
         width: 200px;
