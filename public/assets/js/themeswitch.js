@@ -3,22 +3,7 @@ function initThemeSwitch() {
     const $themeSwitch = $('#themeSwitch');
     const $themeIcon = $('#themeIcon');
     const $siteLogo = $('.site-logo');
-
-    function updatePartnerLogos() {
-        $('.partner-logo').each(function () {
-            const $img = $(this);
-            const src = $img.attr('src');
-
-            if ($('body').hasClass('lightmode')) {
-                if (!src.includes('-dark')) {
-                    $img.attr('src', src.replace('.png', '-dark.png'));
-                }
-            } else {
-                $img.attr('src', src.replace('-dark.png', '.png'));
-            }
-        });
-    }
-
+    
     function enableLightMode() {
         $('body').addClass('lightmode');
         localStorage.setItem('lightmode', 'active');
@@ -46,6 +31,21 @@ function initThemeSwitch() {
             enableLightMode();
         }
     });
+
+    function updatePartnerLogos() {
+        $('.partner-logo').each(function () {
+            const $img = $(this);
+            const src = $img.attr('src');
+
+            if ($('body').hasClass('lightmode')) {
+                if (!src.includes('-dark')) {
+                    $img.attr('src', src.replace('.png', '-dark.png'));
+                }
+            } else {
+                $img.attr('src', src.replace('-dark.png', '.png'));
+            }
+        });
+    }
 }
 
 window.initThemeSwitch = initThemeSwitch;
