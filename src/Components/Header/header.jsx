@@ -6,7 +6,6 @@ function Navbar() {
     const location = useLocation();
     const pathname = location.pathname;
   
-    // Cek apakah dropdown Pages aktif
     const isPagesActive = ["/case_studies", "/team", "/partnership", "/pricing", "/testimonial", "/faq", "/404_page"].includes(pathname);
 
     const isDropdownActive = (paths = []) => {
@@ -52,8 +51,14 @@ function Navbar() {
                         </li>
 
                         {/* Services Dropdown */}
-                        <li className={`nav-item dropdown ${isDropdownActive(["/service", "/single_services"]) ? "active" : ""}`}>
-                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <li className="nav-item dropdown">
+                            <a 
+                                className={`nav-link dropdown-toggle ${isDropdownActive(["/service", "/single_services"]) ? "active" : ""}`}
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                >
                                 Services <i className="fa-solid fa-angle-down accent-color"></i>
                             </a>
                             <ul className="dropdown-menu">
@@ -63,8 +68,14 @@ function Navbar() {
                         </li>
 
                         {/* Pages Dropdown */}
-                        <li className={`nav-item dropdown ${isDropdownActive(["/case_studies", "/team", "/partnership", "/pricing", "/testimonial", "/faq", "/404_page"]) ? "active" : ""}`}>
-                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <li className="nav-item dropdown">
+                            <a 
+                            className={`nav-link dropdown-toggle ${isDropdownActive(["/case_studies", "/team", "/partnership", "/pricing", "/testimonial", "/faq", "/404_page"]) ? "active" : ""}`}
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            >
                             Pages <i className="fa-solid fa-angle-down accent-color"></i>
                             </a>
                             <ul className="dropdown-menu">
@@ -79,9 +90,15 @@ function Navbar() {
                         </li>
 
                         {/* Archive Dropdown */}
-                        <li className={`nav-item dropdown ${isDropdownActive(["/blog", "/single_post"]) ? "active" : ""}`}>
-                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Archive <i className="fa-solid fa-angle-down accent-color"></i>
+                        <li className="nav-item dropdown">
+                            <a 
+                            className={`nav-link dropdown-toggle ${isDropdownActive(["/blog", "/single_post"]) ? "active" : ""}`}
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            >
+                            Services <i className="fa-solid fa-angle-down accent-color"></i>
                             </a>
                             <ul className="dropdown-menu">
                                 <li><NavLink to="/blog" className="dropdown-item">Blog</NavLink></li>

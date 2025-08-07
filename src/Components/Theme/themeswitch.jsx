@@ -12,37 +12,55 @@ export default function ThemeSwitcher() {
     }, []);
 
     useEffect(() => {
-        const siteLogos = document.querySelectorAll('.site-logo');
-        const partnerLogos = document.querySelectorAll('.partner-logo');
+        const updateLogos = () => {
+            const siteLogos = document.querySelectorAll('.site-logo');
+            const partnerLogos = document.querySelectorAll('.partner-logo');
     
-        if (lightMode) {
-            document.body.classList.add('lightmode');
-            localStorage.setItem('lightmode', 'active');
+            if (lightMode) {
+                document.body.classList.add('lightmode');
+                localStorage.setItem('lightmode', 'active');
     
-            siteLogos.forEach((logo) => {
-                logo.setAttribute('src', 'assets/image/marko-logo-dark.png');
-            });
+                siteLogos.forEach((logo) => {
+                    logo.setAttribute('src', 'assets/image/marko-logo-dark.png');
+                });
     
-            partnerLogos.forEach((img) => {
-                const src = img.getAttribute('src');
-                if (!src.includes('-dark')) {
-                    img.setAttribute('src', src.replace('.png', '-dark.png'));
-                }
-            });
-        } else {
-            document.body.classList.remove('lightmode');
-            localStorage.removeItem('lightmode');
+                partnerLogos.forEach((img) => {
+                    const src = img.getAttribute('src');
+                    if (!src.includes('-dark')) {
+                        img.setAttribute('src', src.replace('.png', '-dark.png'));
+                    }
+                });
+            } else {
+                document.body.classList.remove('lightmode');
+                localStorage.removeItem('lightmode');
     
-            siteLogos.forEach((logo) => {
-                logo.setAttribute('src', 'assets/image/marko-logo.png');
-            });
+                siteLogos.forEach((logo) => {
+                    logo.setAttribute('src', 'assets/image/marko-logo.png');
+                });
     
-            partnerLogos.forEach((img) => {
-                const src = img.getAttribute('src');
-                img.setAttribute('src', src.replace('-dark.png', '.png'));
-            });
-        }
+                partnerLogos.forEach((img) => {
+                    const src = img.getAttribute('src');
+                    img.setAttribute('src', src.replace('-dark.png', '.png'));
+                });
+            }
+        };
+    
+        updateLogos();
+    
+        const observer = new MutationObserver(() => {
+            updateLogos();
+        });
+    
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true,
+        });
+    
+        return () => {
+            observer.disconnect();
+        };
     }, [lightMode]);
+    
     
 
     const toggleMode = () => {
