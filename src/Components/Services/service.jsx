@@ -1,8 +1,11 @@
 import React from "react";
 import { services } from "../../Data/ServiceData";
 import ServiceCard from "../Card/ServiceCard";
+import useAnimateOnScroll from "../Hooks/useAnimateOnScroll";
 
 function ServiceSection(){
+    useAnimateOnScroll();
+
     return(
         <>
             <div className="section">

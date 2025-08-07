@@ -1,6 +1,9 @@
 import React from "react";
+import useAnimateOnScroll from "../Hooks/useAnimateOnScroll";
 
 const DigitalStepCard = ({ icon, step, title, content, isFirst }) => {
+    useAnimateOnScroll();
+
     return (
       <div className="digital-process-card animate-box animate__animated" data-animate="animate__fadeInUp">
             {!isFirst && <div className="step-spacer"></div>}

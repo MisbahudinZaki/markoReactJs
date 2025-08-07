@@ -22,7 +22,17 @@ const PartnershipListSection = () => {
                         <div className="partnership-spacer"></div>
                         <div className="row row-cols-md-4 row-cols-1 g-0">
                             {partnerships.map((partner) => (
-                            <PartnershipCard key={partner.id} logo={partner.logo} />
+                            <div className="col partnership-container" key={partner.id}>
+                                <div className="partnership-item">
+                                    <a href="#">
+                                        <img
+                                        src={partner.logo}
+                                        alt="Partner Logo"
+                                        className="partner-logo img-fluid"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
                             ))}
                         </div>
                     </div>

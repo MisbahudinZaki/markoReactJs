@@ -1,6 +1,9 @@
 import React from "react";
+import useAnimateOnScroll from "../Hooks/useAnimateOnScroll";
 
 function PricingPlanSection(){
+    useAnimateOnScroll();
+
     return(
         <div className="section">
             <div className="hero-container">

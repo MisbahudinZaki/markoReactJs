@@ -1,8 +1,11 @@
 import React from "react";
 import { whychooseus } from "../../Data/ChooseUsData";
 import ChooseUsCard from "../Card/ChoooseUsCard";
+import useAnimateOnScroll from "../Hooks/useAnimateOnScroll";
 
 function ChooseUsAboutSection(){
+    useAnimateOnScroll();
+
     return(
         <>
             <div className="section">

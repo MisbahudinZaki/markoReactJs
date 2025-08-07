@@ -12,37 +12,38 @@ export default function ThemeSwitcher() {
     }, []);
 
     useEffect(() => {
-        const siteLogo = document.querySelector('.site-logo');
+        const siteLogos = document.querySelectorAll('.site-logo');
         const partnerLogos = document.querySelectorAll('.partner-logo');
-
+    
         if (lightMode) {
             document.body.classList.add('lightmode');
             localStorage.setItem('lightmode', 'active');
-
-        if (siteLogo) {
-            siteLogo.setAttribute('src', 'assets/image/marko-logo-dark.png');
-        }
-
-        partnerLogos.forEach((img) => {
-            const src = img.getAttribute('src');
-            if (!src.includes('-dark')) {
-                img.setAttribute('src', src.replace('.png', '-dark.png'));
-            }
-        });
+    
+            siteLogos.forEach((logo) => {
+                logo.setAttribute('src', 'assets/image/marko-logo-dark.png');
+            });
+    
+            partnerLogos.forEach((img) => {
+                const src = img.getAttribute('src');
+                if (!src.includes('-dark')) {
+                    img.setAttribute('src', src.replace('.png', '-dark.png'));
+                }
+            });
         } else {
             document.body.classList.remove('lightmode');
             localStorage.removeItem('lightmode');
-
-        if (siteLogo) {
-            siteLogo.setAttribute('src', 'assets/image/marko-logo.png');
-        }
-
-        partnerLogos.forEach((img) => {
-            const src = img.getAttribute('src');
-            img.setAttribute('src', src.replace('-dark.png', '.png'));
-        });
+    
+            siteLogos.forEach((logo) => {
+                logo.setAttribute('src', 'assets/image/marko-logo.png');
+            });
+    
+            partnerLogos.forEach((img) => {
+                const src = img.getAttribute('src');
+                img.setAttribute('src', src.replace('-dark.png', '.png'));
+            });
         }
     }, [lightMode]);
+    
 
     const toggleMode = () => {
         setLightMode((prev) => !prev);

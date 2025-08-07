@@ -1,6 +1,11 @@
 import React from "react";
+import useAnimateOnScroll from "../Hooks/useAnimateOnScroll";
+import useCounterOnScroll from "../Hooks/useCounterOnScroll";
 
 function AboutSection(){
+    useAnimateOnScroll();
+    useCounterOnScroll();
+
     return(
         <div className="section">
             <div className="hero-container">

@@ -1,6 +1,9 @@
 import React from "react";
+import useAnimateOnScroll from "../Hooks/useAnimateOnScroll";
+import VideoButton from "../Video/VideoButton";
 
 function GuideBannerSection(){
+    useAnimateOnScroll();
     return(
         <>
             <div className="section-guide">
@@ -8,9 +11,7 @@ function GuideBannerSection(){
                     <div className="hero-container">
                     <div className="guide-content animate-box animated animate__animated" data-animate="animate__fadeInUp">
                         <div className="guide-video-container">
-                            <button className="request-loader" data-video="https://www.youtube.com/embed/VhBl3dHT5SY?autoplay=1">
-                                <i className="fa-solid fa-play"></i>
-                            </button>
+                            <VideoButton videoUrl="https://www.youtube.com/embed/VhBl3dHT5SY?autoplay=1" />
                             <p>See How We Help Brands Grow</p>
                         </div>
                         <div className="d-flex flex-column gspace-2">

@@ -1,20 +1,41 @@
 import React, { useState } from "react";
+import useAnimateOnScroll from "../Hooks/useAnimateOnScroll";
 
 function NewsletterSection() {
+    useAnimateOnScroll();
+
     const [email, setEmail] = useState("");
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
+
+    const validateEmail = (email) => {
+        const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return pattern.test(email);
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         if (email.trim() === "") {
+            setErrorMessage("This field is required");
             setError(true);
             setSuccess(false);
-        } else {
-            setSuccess(true);
-            setError(false);
-            setEmail("");
+            return;
         }
+
+        if (!validateEmail(email)) {
+            setErrorMessage("Invalid email format");
+            setError(true);
+            setSuccess(false);
+            return;
+        }
+
+        setSuccess(true);
+        setError(false);
+        setEmail("");
+
+        setTimeout(() => setSuccess(false), 3000);
     };
 
     return (
@@ -49,7 +70,7 @@ function NewsletterSection() {
                                     <span className="cross-icon">
                                         <i className="fa-solid fa-2xl fa-xmark"></i>
                                     </span>
-                                    <p className="text-center">Oops! Please enter a valid email.</p>
+                                    <p className="text-center">{errorMessage}</p>
                                 </div>
                             )}
 
@@ -58,6 +79,7 @@ function NewsletterSection() {
                                 onSubmit={handleSubmit}
                                 className="needs-validation animate-box animate__animated"
                                 data-animate="animate__fadeInRight"
+                                noValidate
                             >
                                 <div className="input-container">
                                     <input
@@ -67,8 +89,12 @@ function NewsletterSection() {
                                         placeholder="Give your best email"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
+                                        className={error ? "error-border" : ""}
                                         required
                                     />
+                                    {error && (
+                                        <div className="error-text">{errorMessage}</div>
+                                    )}
                                 </div>
                                 <button className="btn btn-accent" type="submit">
                                     <span className="btn-title">

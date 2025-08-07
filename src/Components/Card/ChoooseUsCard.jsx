@@ -1,6 +1,9 @@
 import React from "react";
+import useAnimateOnScroll from "../Hooks/useAnimateOnScroll";
 
 const ChooseUsCard = ({icon, title, content, link, speed}) => {
+    useAnimateOnScroll();
+    
     return (
         <div className={`card card-chooseus animate-box animate__animated animated ${speed}`} data-animate="animate__fadeInLeft">
             <div className="chooseus-icon-wrapper">

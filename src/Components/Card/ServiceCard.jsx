@@ -1,6 +1,9 @@
 import React from "react";
+import useAnimateOnScroll from "../Hooks/useAnimateOnScroll";
 
 const ServiceCard = ({icon, title, content, link, speed = ""}) => {
+    useAnimateOnScroll();
+    
     return(
         <>
             <div className={`card card-service animate-box animate__animated animated ${speed}`} data-animate="animate__fadeInLeft">
