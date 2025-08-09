@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import BannerHomeSection from "../../Components/Banner";
 import ExpertiseSection from "../../Components/Expertise/expertise";
 import ChooseUsSection from "../../Components/ChooseUs/choose";
@@ -16,6 +17,9 @@ import BlogSection from "../../Components/Blog/blog";
 function HomePage(){
     return(
         <>
+            <Helmet>
+                <title>Home - Marko - Digital Marketing Agency</title>
+            </Helmet>
             <BannerHomeSection />
             <ExpertiseSection />
             <PartnershipSection />

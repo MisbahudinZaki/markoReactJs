@@ -98,7 +98,7 @@ function Navbar() {
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                             >
-                            Services <i className="fa-solid fa-angle-down accent-color"></i>
+                            Archive <i className="fa-solid fa-angle-down accent-color"></i>
                             </a>
                             <ul className="dropdown-menu">
                                 <li><NavLink to="/blog" className="dropdown-item">Blog</NavLink></li>

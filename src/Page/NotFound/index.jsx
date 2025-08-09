@@ -1,9 +1,13 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import NotFoundSection from "../../Components/NotFound/notfound";
 
 function NotFoundPage(){
     return(
         <>
+            <Helmet>
+                <title>Error 404 - Marko - Digital Marketing Agency</title>
+            </Helmet>
             <NotFoundSection />
         </>
     );

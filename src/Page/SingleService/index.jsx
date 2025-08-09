@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import BannerInnerSection from "../../Components/Banner/Inner";
 import SingleServiceSection from "../../Components/SingleService/singleservice";
 import NewsletterSection from "../../Components/Form/Newsletter";
@@ -8,6 +9,9 @@ import FaqSection from "../../Components/FAQs/faq";
 function SingleServicePage(){
     return(
         <>
+          <Helmet>
+            <title>Single Service - Marko - Digital Marketing Agency</title>
+          </Helmet>
           <BannerInnerSection title="Social Media Marketing" currentPage="Services Details" />
           <SingleServiceSection />
           <TestimonialSection />
