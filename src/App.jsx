@@ -1,5 +1,4 @@
 import { BrowserRouter as Router } from "react-router-dom";
-import { useEffect } from "react";
 import AppRouter from "./Routers";
 import Navbar from "./Components/Header/header";
 import Footer from "./Components/Footer/footer";
