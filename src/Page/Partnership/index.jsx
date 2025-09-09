@@ -4,7 +4,7 @@ import PartnershipListSection from "../../Components/Partnership/PartnershipList
 import GuideBannerSection from "../../Components/Banner/guide";
 import ModalVideoSection from "../../Components/Video/video";
 import TestimonialSection from "../../Components/Testimonial/testimonial";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 function PartnershipPage(){
     return(

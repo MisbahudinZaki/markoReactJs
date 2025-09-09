@@ -10,8 +10,8 @@ function ChooseUsSection(){
         <>
             <div className="section">
                 <div className="hero-container">
-                    <div className="row row-cols-xl-2 row-cols-1 grid-spacer-5">
-                    <div className="col order-md-1 order-2">
+                    <div className="d-flex flex-column flex-xl-row gspace-5">
+                    <div className="chooseus-card-container">
                         <div className="d-flex flex-column gspace-2">
                             {whychooseus.slice(0, 3).map((item) => (
                                 <ChooseUsCard 
@@ -24,7 +24,7 @@ function ChooseUsSection(){
                             ))}
                         </div>
                     </div>
-                    <div className="col order-md-2 order-1">
+                    <div className="chooseus-content-container">
                         <div className="d-flex flex-column gspace-5">
                         <div className="d-flex flex-column gspace-2">
                             <div className="sub-heading animate-box animated animate__animated" data-animate="animate__fadeInDown">

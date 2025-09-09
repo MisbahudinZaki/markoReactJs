@@ -1,6 +1,5 @@
 import React from "react";
 import { partnerships } from "../../Data/PartnershipData";
-import PartnershipCard from "../Card/PartnershipCard";
 
 const PartnershipListSection = () => {
   return (

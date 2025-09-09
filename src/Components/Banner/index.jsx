@@ -32,7 +32,8 @@ function BannerHomeSection() {
                 enablejsapi: 1,
                 disablekb: 1,
                 modestbranding: 1,
-                iv_load_policy: 3
+                iv_load_policy: 3,
+                'origin': window.location.origin
                 },
                 events: {
                 onReady: onPlayerReady,
@@ -76,6 +77,19 @@ function BannerHomeSection() {
             const iframe = playerRef.current.getIframe();
             iframe.style.width = `${newWidth}px`;
             iframe.style.height = `${newHeight}px`;
+        }
+
+        function handleYouTubeErrors() {
+            window.addEventListener('message', function(event) {
+                if (event.origin !== 'https://www.youtube.com') return;
+            
+                try {
+                    var data = JSON.parse(event.data);
+                   
+                } catch (e) {
+         
+                }
+            });
         }
 
         return () => {

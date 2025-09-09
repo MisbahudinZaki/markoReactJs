@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import BannerInnerSection from "../../Components/Banner/Inner";
 import CaseStudiesSection from "../../Components/CaseStudies/CaseStudies";
 import GuideBannerSection from "../../Components/Banner/guide";

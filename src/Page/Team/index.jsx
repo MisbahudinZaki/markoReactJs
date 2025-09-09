@@ -3,7 +3,7 @@ import BannerInnerSection from "../../Components/Banner/Inner";
 import PartnershipSection from "../../Components/Partnership/Partnership";
 import ChooseUsSection from "../../Components/ChooseUs/choose";
 import TeamExtendSection from "../../Components/Team/TeamExtend";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 function TeamPage(){
     return(

@@ -267,7 +267,31 @@ body{
     font-family: var(--global-font);
     color: var(--primary);
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 0;
 }
+
+body::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('../image/imgi_44_Line-Background-4.png');
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: contain;
+    opacity: 1;
+    z-index: -1;
+}
+
+body.lightmode::before {
+    opacity: 0;
+}
+
+
+body
 
 body.lightmode .keep-dark {
     --primary: #D1D1D1;
@@ -3253,6 +3277,14 @@ body.lightmode .guide-banner::before {
     z-index: 0;
 }
 
+.testimonial-title-container{
+    width: 65%;
+}
+
+.testimonial-reviewer-container{
+    width: 35%;
+}
+
 .card-testimonial-reviewer .counter{
     font-size: var(--font-size-11xl);
     line-height: 1.2em;
@@ -3705,6 +3737,15 @@ body.lightmode .newsletter-layout{
     flex-direction: row;
     min-height: 150px;
     width: 100%;
+}
+
+.chooseus-card-container{
+    width: 50%;
+    order: 1;
+}
+.chooseus-content-container{
+    width: 50%;
+    order: 2;
 }
 
 .chooseus-icon-wrapper{
@@ -4672,6 +4713,7 @@ body.lightmode .cta-service-banner::before{
     .guide-video-container p{
         margin-bottom: 0;
         font-size: var(--font-size-sm);
+        max-width: 20%;
     }
     .dropdown-item {
         padding: 15px 30px;
@@ -4694,6 +4736,14 @@ body.lightmode .cta-service-banner::before{
     }
     .card-expertise .counter-detail{
         font-size: var(--font-size-12xl);
+    }
+    .chooseus-card-container{
+        width: 100%;
+        order: 2;
+    }
+    .chooseus-content-container{
+        width: 100%;
+        order: 1;
     }
     .contactus-content{
         width: 80%;
@@ -4720,6 +4770,10 @@ body.lightmode .cta-service-banner::before{
     }
     .heading-container{
         max-width: 70%;
+    }
+    .testimonial-title-container,
+    .testimonial-reviewer-container{
+        width: 100%;
     }
     .testimonial-reviewer{
         flex-direction: column;
@@ -4937,9 +4991,6 @@ body.lightmode .cta-service-banner::before{
     p{
         font-size: var(--font-size-sm);
     }
-    header{
-        padding: 20px 20px 20px 20px;
-    }
     .logo-footer{
         max-width: 50%;
     }
@@ -5003,6 +5054,10 @@ body.lightmode .cta-service-banner::before{
     }
     .layout-404 p{
         max-width: 100%
+    }
+    .guide-video-container p{
+        font-size: var(--font-size-xs);
+        max-width: 40%;
     }
     .testimonial-reviewer{
         flex-direction: row;
