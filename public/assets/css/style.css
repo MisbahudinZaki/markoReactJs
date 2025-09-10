@@ -290,9 +290,6 @@ body.lightmode::before {
     opacity: 0;
 }
 
-
-body
-
 body.lightmode .keep-dark {
     --primary: #D1D1D1;
     --secondary: #040404;
